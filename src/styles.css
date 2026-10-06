@@ -1,0 +1,1054 @@
+/* ==========================================================================
+   TobiDoro — UI UX Pro Max Theme System (https://www.uupm.cc/)
+   ========================================================================== */
+
+:root {
+  /* Fonts */
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Brand Colors from uupm.cc */
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --accent: #f97316;
+  --accent-light: #fb923c;
+  --accent-glow: rgba(249, 115, 22, 0.25);
+  --primary-glow: rgba(37, 99, 235, 0.35);
+
+  /* Light Theme Defaults */
+  --bg: #f8fafc;
+  --card: rgba(255, 255, 255, 0.85);
+  --card-hover: rgba(255, 255, 255, 0.95);
+  --ink: #0f172a;
+  --mute: #64748b;
+  --line: rgba(226, 232, 240, 0.85);
+  --line-hover: rgba(203, 213, 225, 1);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --input-bg: rgba(255, 255, 255, 0.7);
+  --btn-sec-bg: rgba(255, 255, 255, 0.9);
+  --btn-sec-hover: #f1f5f9;
+  --pill-bg: rgba(241, 245, 249, 0.85);
+  --orb-a: rgba(37, 99, 235, 0.15);
+  --orb-b: rgba(249, 115, 22, 0.12);
+  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+   DARK THEME (Default uupm.cc aesthetic: Deep Slate / Cyber Glass)
+   -------------------------------------------------------------------------- */
+:root.dark,
+[data-theme='dark'] {
+  --bg: #0b0b10;
+  --card: rgba(17, 24, 39, 0.80);
+  --card-hover: rgba(255, 255, 255, 0.08);
+  --ink: #f8fafc;
+  --mute: #94a3b8;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-hover: rgba(255, 255, 255, 0.22);
+  --nav-bg: rgba(15, 23, 42, 0.85);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --btn-sec-bg: rgba(255, 255, 255, 0.06);
+  --btn-sec-hover: rgba(255, 255, 255, 0.12);
+  --pill-bg: rgba(255, 255, 255, 0.06);
+  --orb-a: rgba(37, 99, 235, 0.28);
+  --orb-b: rgba(249, 115, 22, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* LIGHT THEME */
+[data-theme='light'] {
+  --bg: #f8fafc;
+  --card: rgba(255, 255, 255, 0.88);
+  --card-hover: rgba(255, 255, 255, 0.98);
+  --ink: #0f172a;
+  --mute: #64748b;
+  --line: rgba(226, 232, 240, 0.9);
+  --line-hover: #cbd5e1;
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --btn-sec-bg: #ffffff;
+  --btn-sec-hover: #f1f5f9;
+  --pill-bg: #f1f5f9;
+  --orb-a: rgba(37, 99, 235, 0.14);
+  --orb-b: rgba(249, 115, 22, 0.10);
+  --glass-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* AURORA CAM (Frosted Neon Glass) */
+[data-theme='cam'] {
+  --bg: #090e1f;
+  --card: rgba(15, 23, 42, 0.65);
+  --card-hover: rgba(255, 255, 255, 0.12);
+  --ink: #f1f5f9;
+  --mute: #93c5fd;
+  --line: rgba(56, 189, 248, 0.20);
+  --line-hover: rgba(56, 189, 248, 0.40);
+  --nav-bg: rgba(15, 23, 42, 0.75);
+  --input-bg: rgba(255, 255, 255, 0.06);
+  --btn-sec-bg: rgba(56, 189, 248, 0.08);
+  --btn-sec-hover: rgba(56, 189, 248, 0.18);
+  --pill-bg: rgba(255, 255, 255, 0.08);
+  --primary: #06b6d4;
+  --primary-light: #38bdf8;
+  --accent: #a855f7;
+  --orb-a: rgba(6, 182, 212, 0.32);
+  --orb-b: rgba(168, 85, 247, 0.24);
+  --glass-shadow: 0 10px 40px rgba(6, 182, 212, 0.15);
+}
+
+/* SUNSET GLOW (Amber & Orange Aurora) */
+[data-theme='gun'] {
+  --bg: #140b18;
+  --card: rgba(29, 15, 36, 0.75);
+  --card-hover: rgba(255, 255, 255, 0.10);
+  --ink: #fff7ed;
+  --mute: #fdba74;
+  --line: rgba(249, 115, 22, 0.22);
+  --line-hover: rgba(249, 115, 22, 0.45);
+  --nav-bg: rgba(29, 15, 36, 0.85);
+  --input-bg: rgba(255, 255, 255, 0.06);
+  --btn-sec-bg: rgba(249, 115, 22, 0.09);
+  --btn-sec-hover: rgba(249, 115, 22, 0.20);
+  --pill-bg: rgba(255, 255, 255, 0.07);
+  --primary: #f97316;
+  --primary-light: #fb923c;
+  --accent: #f43f5e;
+  --orb-a: rgba(249, 115, 22, 0.30);
+  --orb-b: rgba(244, 63, 94, 0.22);
+  --glass-shadow: 0 10px 40px rgba(249, 115, 22, 0.15);
+}
+
+/* MIDNIGHT CYBER (Deep Tech Cosmos) */
+[data-theme='gece'] {
+  --bg: #05070e;
+  --card: rgba(11, 15, 28, 0.82);
+  --card-hover: rgba(255, 255, 255, 0.09);
+  --ink: #e2e8f0;
+  --mute: #818cf8;
+  --line: rgba(99, 102, 241, 0.20);
+  --line-hover: rgba(99, 102, 241, 0.42);
+  --nav-bg: rgba(11, 15, 28, 0.88);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --btn-sec-bg: rgba(99, 102, 241, 0.08);
+  --btn-sec-hover: rgba(99, 102, 241, 0.18);
+  --pill-bg: rgba(255, 255, 255, 0.06);
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --accent: #00d2ef;
+  --orb-a: rgba(99, 102, 241, 0.28);
+  --orb-b: rgba(0, 210, 239, 0.18);
+  --glass-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   GLOBAL RESET & BASE STYLES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color-scheme: dark light;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+button, input, select {
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   AURORA GLOW BACKGROUND SYSTEM (Directly from uupm.cc)
+   -------------------------------------------------------------------------- */
+.aurora-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-mesh {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(80% 80% at 50% -20%, var(--orb-a), transparent),
+              radial-gradient(50% 50% at 85% 20%, var(--orb-b), transparent),
+              radial-gradient(50% 50% at 15% 80%, var(--orb-a), transparent);
+  opacity: 0.75;
+  transition: opacity 0.5s ease;
+}
+
+.aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+}
+
+.orb-primary {
+  width: 420px;
+  height: 420px;
+  background-color: var(--orb-a);
+  top: 15%;
+  left: 18%;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.orb-accent {
+  width: 360px;
+  height: 360px;
+  background-color: var(--orb-b);
+  bottom: 18%;
+  right: 15%;
+  animation: floatOrb 10s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.08);
+  }
+}
+
+/* Optional theme decorative backdrop elements */
+.bg-decor i {
+  position: absolute;
+  display: none;
+}
+[data-theme='cam'] .bg-decor .a {
+  display: block;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(90px);
+  background: #38bdf8;
+  opacity: 0.15;
+  top: 10%;
+  left: -5%;
+}
+[data-theme='gece'] .bg-decor .a {
+  display: block;
+  inset: 0;
+  background-image: radial-gradient(1px 1px at 30px 40px, #fff, transparent),
+                    radial-gradient(1.5px 1.5px at 120px 90px, #a5b4fc, transparent),
+                    radial-gradient(1px 1px at 240px 180px, #fff, transparent);
+  background-size: 260px 260px;
+  opacity: 0.35;
+  animation: twinkle 6s ease-in-out infinite alternate;
+}
+@keyframes twinkle {
+  from { opacity: 0.2; }
+  to { opacity: 0.5; }
+}
+
+/* --------------------------------------------------------------------------
+   GRADIENTS & TYPOGRAPHY UTILITIES
+   -------------------------------------------------------------------------- */
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   APP CONTAINER & LAYOUT
+   -------------------------------------------------------------------------- */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------
+   FLOATING NAVBAR (Signature uupm.cc Glass Pill Navbar)
+   -------------------------------------------------------------------------- */
+.navbar-pill {
+  position: sticky;
+  top: 16px;
+  z-index: 50;
+  width: calc(100% - 32px);
+  max-width: 860px;
+  margin: 16px auto 0;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px var(--primary-glow));
+}
+
+.brand-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.badge-pro {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  color: var(--mute);
+}
+.nav-stat-chip strong {
+  color: var(--ink);
+}
+.stat-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseDot 2s infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.nav-themes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--pill-bg);
+  padding: 3px 6px;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+}
+
+.swatch-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  padding: 1px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swatch-btn i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.swatch-btn[data-t='dark'] i {
+  background: linear-gradient(135deg, #0b0b10 50%, #2563eb 50%);
+}
+.swatch-btn[data-t='light'] i {
+  background: linear-gradient(135deg, #ffffff 50%, #f97316 50%);
+}
+.swatch-btn[data-t='cam'] i {
+  background: linear-gradient(135deg, #06b6d4, #a855f7);
+}
+.swatch-btn[data-t='gun'] i {
+  background: linear-gradient(135deg, #f97316, #f43f5e);
+}
+.swatch-btn[data-t='gece'] i {
+  background: linear-gradient(135deg, #111827, #6366f1);
+}
+.swatch-btn.active {
+  border-color: var(--primary-light);
+  transform: scale(1.15);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+.theme-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+.theme-mode-btn:hover {
+  background: var(--btn-sec-hover);
+  border-color: var(--line-hover);
+}
+.icon-sun-moon {
+  width: 18px;
+  height: 18px;
+}
+
+/* --------------------------------------------------------------------------
+   MAIN CONTENT CONTAINER
+   -------------------------------------------------------------------------- */
+.main-content {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 32px);
+  max-width: 860px;
+  margin: 24px auto 0;
+  display: grid;
+  gap: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   GLASS CARDS (From uupm.cc)
+   -------------------------------------------------------------------------- */
+.glass-card {
+  background-color: var(--card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 24px 26px;
+  box-shadow: var(--glass-shadow);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--line-hover);
+  box-shadow: 0 20px 25px -5px var(--primary-glow), 0 8px 10px -6px var(--primary-glow);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.head-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.head-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--primary-light);
+}
+
+.card-head h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.badge-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  color: var(--mute);
+}
+
+/* --------------------------------------------------------------------------
+   BUTTONS (uupm.cc Button System)
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  color: #ffffff;
+  padding: 11px 26px;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px 0 var(--primary-glow);
+}
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 var(--primary-glow);
+  filter: brightness(1.06);
+}
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--btn-sec-bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 11px 22px;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-secondary:hover:not(:disabled) {
+  background: var(--btn-sec-hover);
+  border-color: var(--line-hover);
+  transform: translateY(-1px);
+}
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-break {
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.btn-break:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.btn-sm {
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  border-radius: 0.6rem;
+}
+
+/* --------------------------------------------------------------------------
+   SEGMENTED CONTROLS (.seg)
+   -------------------------------------------------------------------------- */
+.seg {
+  display: inline-flex;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  border-radius: 9999px;
+  padding: 4px;
+  gap: 3px;
+}
+
+.seg button {
+  background: transparent;
+  color: var(--mute);
+  padding: 7px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.seg button:hover:not(:disabled) {
+  color: var(--ink);
+}
+
+.seg button.on {
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  color: #ffffff;
+  box-shadow: 0 2px 10px var(--primary-glow);
+}
+
+.seg.small button {
+  padding: 5px 13px;
+  font-size: 0.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   TIMER HERO CARD & RADIAL DIAL
+   -------------------------------------------------------------------------- */
+.timer-card {
+  text-align: center;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dial {
+  position: relative;
+  width: min(290px, 70vw);
+  aspect-ratio: 1;
+  margin: 22px auto 14px;
+}
+
+.dial svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.dial circle {
+  fill: none;
+}
+
+.trk {
+  stroke: var(--line);
+  stroke-width: 4;
+}
+
+.prg {
+  stroke: url(#dialGradient);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+.mid {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 12vw, 70px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.clock.brk {
+  color: #10b981;
+  text-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+}
+
+.sub-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--mute);
+}
+
+.sub-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+}
+
+.controls-row {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Garden */
+.garden-box {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.garden-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--mute);
+}
+
+.garden-plants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  min-height: 32px;
+  align-items: center;
+}
+
+.garden-empty {
+  font-size: 0.85rem;
+  color: var(--mute);
+  font-style: italic;
+}
+
+.plant-item {
+  font-size: 1.45rem;
+  line-height: 1;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.plant-item:hover {
+  transform: scale(1.25);
+}
+.plant-item.now {
+  animation: plantGrow 1.5s ease-in-out infinite alternate;
+}
+@keyframes plantGrow {
+  from { transform: scale(0.9); }
+  to { transform: scale(1.2); }
+}
+
+/* --------------------------------------------------------------------------
+   CATEGORIES SECTION
+   -------------------------------------------------------------------------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.chip-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--c);
+  box-shadow: 0 0 6px var(--c);
+}
+
+.chip:hover:not(:disabled) {
+  border-color: var(--c);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.chip.on {
+  border-color: var(--c);
+  background: color-mix(in srgb, var(--c) 16%, transparent);
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--c) 30%, transparent);
+}
+
+.row.add {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  background: var(--input-bg);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 11px 16px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+input::placeholder {
+  color: var(--mute);
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   STATISTICS SECTION & UUPM METRICS GRID
+   -------------------------------------------------------------------------- */
+.empty-box {
+  padding: 24px 16px;
+  text-align: center;
+}
+.empty {
+  color: var(--mute);
+  font-size: 0.95rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.metric-box {
+  background: var(--pill-bg);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 16px 12px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.metric-box:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-hover);
+}
+
+.metric-num {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.metric-desc {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--mute);
+}
+
+/* Bars breakdown */
+.bars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.bar-label {
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  background: var(--pill-bg);
+  border-radius: 9999px;
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.bar-track b {
+  display: block;
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+.bar-val {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--mute);
+  text-align: right;
+  font-weight: 600;
+}
+
+/* Cols chart */
+.cols-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 140px;
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.cols-chart.ay {
+  gap: 3px;
+}
+
+.col-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 0;
+}
+
+.stack-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: 6px 6px 2px 2px;
+  overflow: hidden;
+  min-height: 3px;
+  background: var(--pill-bg);
+}
+
+.col-item small {
+  font-size: 0.65rem;
+  color: var(--mute);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   MUSIC PLAYER SECTION
+   -------------------------------------------------------------------------- */
+.music-card .row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ytbox {
+  margin: 16px 0;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.player-controls {
+  margin-top: 14px;
+  justify-content: center;
+}
+
+.spotify-embed-container {
+  margin-top: 16px;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.err {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .navbar-pill {
+    padding: 8px 14px;
+    width: calc(100% - 24px);
+    margin-top: 10px;
+  }
+  .main-content {
+    width: calc(100% - 24px);
+    margin-top: 16px;
+    gap: 16px;
+  }
+  .glass-card {
+    padding: 20px 16px;
+  }
+  .nav-stat-chip {
+    display: none;
+  }
+  .bar-row {
+    grid-template-columns: 85px 1fr 65px;
+  }
+  .metrics-grid {
+    gap: 8px;
+  }
+  .metric-box {
+    padding: 12px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
